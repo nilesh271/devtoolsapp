@@ -10,4 +10,7 @@ export default defineConfig({
     // dependencies (like material-tailwind) bring their own.
     dedupe: ['react', 'react-dom'],
   },
+  build: {
+    outDir: 'docs'
+  }
 })
