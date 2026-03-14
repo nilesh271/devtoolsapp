@@ -1,6 +1,7 @@
 const withMT = require("@material-tailwind/react/utils/withMT");
 
 module.exports = withMT({
+  darkMode: ['selector', '[class="dark"]'],
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -9,7 +10,18 @@ module.exports = withMT({
     "./node_modules/@material-tailwind/react/theme/components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        // primary brand color (indigo-ish)
+        primary: '#4f46e5',
+        accent: '#6366f1',
+        background: '#fafafa',
+        "button-green": '#10b981',
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', '"Noto Sans"', 'sans-serif', '"Apple Color Emoji"', '"Segoe UI Emoji"', '"Segoe UI Symbol"', '"Noto Color Emoji"'],
+      },
+    },
   },
   plugins: [],
 });
